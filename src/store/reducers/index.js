@@ -32,9 +32,7 @@ export default (state = initialState, action) => {
       initialToilets: action.payload,
     };
   case FILTER_CLOSED_TOILETS:
-    // eslint-disable-next-line no-case-declarations
     const filteredList = state.toilets.filter((item) => item.properties.Attributes.CloseFlag !== 'закрыт');
-    // eslint-disable-next-line no-case-declarations
     const result = state.isFiltered ? state.initialToilets : filteredList;
     return {
       ...state,

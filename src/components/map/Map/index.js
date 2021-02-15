@@ -47,13 +47,13 @@ class Map extends React.Component {
             <LayersControl.BaseLayer checked name="CartoDB: Positron">
               <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+                url="//{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
               />
             </LayersControl.BaseLayer>
             <LayersControl.BaseLayer name="CartoDB: DarkMmatter">
               <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
+                url="//{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
               />
             </LayersControl.BaseLayer>
             <LayersControl.BaseLayer name="Google Maps: Спутник">

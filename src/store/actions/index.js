@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import apiConfig from '../config';
+
 export const INIT_MAP = 'INIT_MAP';
 export const LOAD_API_INFO = 'LOAD_API_INFO';
 export const LOAD_TOILETS_DATA = 'LOAD_TOILETS_DATA';
@@ -24,7 +26,7 @@ export const filterClosedToilets = () => (dispatch) => {
 };
 
 export const getApiInfo = () => (dispatch) => {
-  axios.get('https://apidata.mos.ru/v1/datasets/842/', {
+  axios.get(apiConfig.apiInfo, {
     params: {
       api_key: process.env.REACT_APP_MOS_RU,
     },
@@ -38,7 +40,7 @@ export const getApiInfo = () => (dispatch) => {
 };
 
 export const getToiletsInfo = () => (dispatch) => {
-  axios.get('https://apidata.mos.ru/v1/features/842/', {
+  axios.get(apiConfig.features, {
     params: {
       api_key: process.env.REACT_APP_MOS_RU,
     },

@@ -21,8 +21,10 @@ class App extends React.Component {
   render() {
     const { toilets, apiInfo } = this.props;
 
+    const showMap = toilets && apiInfo;
+
     return (
-      toilets
+      showMap
         ? (
           <Layout info={apiInfo}>
             <Map toilets={toilets} />

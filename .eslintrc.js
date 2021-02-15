@@ -32,5 +32,6 @@ module.exports = {
     'max-len': ['error', 140, 2, { ignoreComments: true, ignoreUrls: true }],
     'linebreak-style': ['error', 'unix'],
     'react/forbid-prop-types': [0],
+    'no-case-declarations': [0],
   },
 };
