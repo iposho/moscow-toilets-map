@@ -11,13 +11,14 @@
 
 @media (max-width: 800px) {
   .apiInfo {
-    position: absolute;
-    bottom: 15px;
-    left: 0;
-    background-color: transparent;
-    display: flex;
-    font-size: .75rem;
-    color: #444;
-    max-width: calc(100% - 30px);
+    display: none;
+    //position: absolute;
+    //bottom: 15px;
+    //left: 0;
+    //background-color: transparent;
+    //display: flex;
+    //font-size: .75rem;
+    //color: #444;
+    //max-width: calc(100% - 30px);
   }
 }

@@ -6,6 +6,7 @@ export const INIT_MAP = 'INIT_MAP';
 export const LOAD_API_INFO = 'LOAD_API_INFO';
 export const LOAD_TOILETS_DATA = 'LOAD_TOILETS_DATA';
 export const FILTER_CLOSED_TOILETS = 'FILTER_CLOSED_TOILETS';
+export const SET_REQUEST_ERROR = 'SET_REQUEST_ERROR';
 
 export const initMap = () => (dispatch) => {
   dispatch({
@@ -25,6 +26,10 @@ export const filterClosedToilets = () => (dispatch) => {
   dispatch({ type: FILTER_CLOSED_TOILETS });
 };
 
+export const setRequestError = (payload) => (dispatch) => {
+  dispatch({ type: SET_REQUEST_ERROR, payload });
+};
+
 export const getApiInfo = () => (dispatch) => {
   axios.get(apiConfig.apiInfo, {
     params: {
@@ -35,7 +40,7 @@ export const getApiInfo = () => (dispatch) => {
       dispatch(loadApiInfo(response.data));
     })
     .catch((error) => {
-      console.error(error);
+      dispatch(setRequestError(error));
     });
 };
 
@@ -50,6 +55,6 @@ export const getToiletsInfo = () => (dispatch) => {
       dispatch(loadToiletsInfo(features));
     })
     .catch((error) => {
-      console.error(error);
+      dispatch(setRequestError(error));
     });
 };

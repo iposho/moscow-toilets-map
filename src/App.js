@@ -19,9 +19,9 @@ class App extends React.Component {
   }
 
   render() {
-    const { toilets, apiInfo } = this.props;
+    const { toilets, apiInfo, error } = this.props;
 
-    const showMap = toilets && apiInfo;
+    const showMap = !error && (toilets && apiInfo);
 
     return (
       showMap
@@ -30,7 +30,7 @@ class App extends React.Component {
             <Map toilets={toilets} />
           </Layout>
         )
-        : <Preloader />
+        : <Preloader error={error} />
     );
   }
 }
@@ -41,6 +41,7 @@ App.defaultProps = {
   initMap: () => {},
   toilets: null,
   apiInfo: null,
+  error: null,
 };
 
 App.propTypes = {
@@ -49,6 +50,7 @@ App.propTypes = {
   getToiletsInfo: PropTypes.func,
   toilets: PropTypes.array,
   apiInfo: PropTypes.object,
+  error: PropTypes.bool,
 };
 
 const mapStateToProps = (state) => ({

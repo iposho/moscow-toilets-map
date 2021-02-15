@@ -10,10 +10,11 @@ import {
   ZoomControl,
 } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
-import ReactLeafletGoogleLayer from 'react-leaflet-google-layer';
 import { Icon } from 'leaflet';
 
 import { v4 as uuidv4 } from 'uuid';
+
+import { isMobileOnly } from '../../../utils/isMobile';
 
 import icon from '../../../assets/icons/wc-off.png';
 import iconLive from '../../../assets/icons/wc.png';
@@ -31,6 +32,7 @@ class Map extends React.Component {
     const initialCoords = [this.state.lat, this.state.lng];
     const { zoom } = this.state;
     const { toilets } = this.props;
+    const zoomControlPosition = isMobileOnly() ? 'topleft' : 'bottomright';
 
     return (
       toilets.length > 0
@@ -42,7 +44,7 @@ class Map extends React.Component {
           style={{ width: '100%', minHeight: '100vh' }}
           zoomControl={false}
         >
-          <ZoomControl position="bottomright" />
+          <ZoomControl position={zoomControlPosition} />
           <LayersControl position="topright">
             <LayersControl.BaseLayer checked name="CartoDB: Positron">
               <TileLayer
@@ -54,12 +56,6 @@ class Map extends React.Component {
               <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="//{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
-              />
-            </LayersControl.BaseLayer>
-            <LayersControl.BaseLayer name="Google Maps: Спутник">
-              <ReactLeafletGoogleLayer
-                apiKey={process.env.REACT_APP_GOOGLE_MAPS_API}
-                type="satellite"
               />
             </LayersControl.BaseLayer>
           </LayersControl>
