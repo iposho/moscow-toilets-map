@@ -1,14 +1,30 @@
 {
-  "name": "othermoscow.site",
+  "name": "moscow-toilets-map",
   "version": "0.1.0",
+  "author": "Pavel Kuzyakin <pavel@kuzyakin.me> (https://pavel.kuzyakin.me)",
+  "description": "Map with data from goverment API",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "leaflet": "^1.7.1",
+    "leaflet.markercluster": "^1.4.1",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-leaflet": "^3.1.0",
+    "react-leaflet-google-layer": "^2.0.3",
+    "react-leaflet-markercluster": "^3.0.0-rc1",
+    "react-redux": "^7.2.2",
     "react-scripts": "4.0.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.32.7",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -34,5 +50,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

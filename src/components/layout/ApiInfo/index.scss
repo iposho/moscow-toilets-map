@@ -1,0 +1,25 @@
+.apiInfo {
+  position: absolute;
+  z-index: 9999;
+  bottom: 10px;
+  left: 10px;
+  background-color: #fff;
+  padding: 5px 15px;
+  display: flex;
+  font-size: .75rem;
+  color: #444;
+}
+
+@media (max-width: 800px) {
+  .apiInfo {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    background-color: transparent;
+    padding: 5px 15px;
+    display: flex;
+    font-size: .75rem;
+    color: #444;
+    max-width: calc(100% - 30px);
+  }
+}
