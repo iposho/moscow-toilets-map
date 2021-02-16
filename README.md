@@ -11,6 +11,8 @@
 
 Данные загружаются с [data.mos.ru](https://data.mos.ru/opendata/7701236617-statsionarnye-obshchestvennye-tualety). Внутри CRA и Leaflet.js.
 
+Демо: [toilets.kuzyakin.me](https://toilets.kuzyakin.me/).
+
 
 
 ## Запуск
