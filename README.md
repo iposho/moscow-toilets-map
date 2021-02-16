@@ -1,8 +1,3 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-[![MIT License][license-shield]][license-url]
-
 <img src="public/logo192.png" align="right" />
 
 # Карта московских общественных туалетов
