@@ -1,32 +1,39 @@
-# Moscow  Toilets Map
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![MIT License][license-shield]][license-url]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="public/logo192.png" align="right" />
 
-## Available Scripts
+# Карта московских общественных туалетов
 
-In the project directory, you can run:
+Карта стационарных общественных туалетов, находящхся на балансе Департамента жилищно-коммунального хозяйства города Москвы, расположенные в пределах установленных границ города Москвы.
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Данные загружаются с [data.mos.ru](https://data.mos.ru/opendata/7701236617-statsionarnye-obshchestvennye-tualety). Внутри CRA и Leaflet.js.
 
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Запуск
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Зарегистрируйтесь и получите ключ доступа к API открытых данных на сайте [apidata.mos.ru](https://apidata.mos.ru/).
+
+Добавьте его в .env:
+
+```bash
+$ echo "REACT_APP_MOS_RU = YOUR_API_KEY" >> .env
+```
+
+Затем все, как обычно:
+
+```bash
+$ npm i
+[...]
+$ npm run start
+```
+
+
+Приложение запускается по адресу [http://localhost:3000](http://localhost:3000).
+
+
+
+Развернуто с помощью [Create React App](https://github.com/facebook/create-react-app).
