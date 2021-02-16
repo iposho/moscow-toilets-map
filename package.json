@@ -1,6 +1,6 @@
 {
   "name": "moscow-toilets-map",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Pavel Kuzyakin <pavel@kuzyakin.me> (https://pavel.kuzyakin.me)",
   "description": "Map with data from goverment API",
   "license": "MIT",
