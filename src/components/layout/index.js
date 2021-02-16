@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Header from './Header';
-import ApiInfo from './ApiInfo';
+import ApiInfo from './AppInfo';
 
 const Layout = ({ children, info }) => (
   <main>

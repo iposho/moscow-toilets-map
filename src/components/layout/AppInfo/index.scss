@@ -1,16 +1,17 @@
-.apiInfo {
+.copyright {
   position: absolute;
   z-index: 9999;
-  bottom: 10px;
+  bottom: 3px;
   left: 10px;
   background-color: transparent;
   display: flex;
-  font-size: .75rem;
+  font-size: 0.65rem;
   color: #444;
+  font-family: sans-serif;
 }
 
 @media (max-width: 800px) {
-  .apiInfo {
+  .copyright {
     display: none;
     //position: absolute;
     //bottom: 15px;
