@@ -22,7 +22,7 @@ const Header = (props) => {
       <header className="header">
         <div>
           <button type="button" className="header-title" onClick={toggleInfoCard}>
-            {process.env.REACT_APP_WEBSITE_NAME}
+            Общественные туалеты Москвы
           </button>
           <label htmlFor="filter">
             <input

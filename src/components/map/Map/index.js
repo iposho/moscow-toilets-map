@@ -14,7 +14,7 @@ import { Icon } from 'leaflet';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { isMobileOnly } from '../../../utils/isMobile';
+import { isMobile } from '../../../utils/isMobile';
 
 import icon from '../../../assets/icons/wc-off.png';
 import iconLive from '../../../assets/icons/wc.png';
@@ -32,7 +32,7 @@ class Map extends React.Component {
     const initialCoords = [this.state.lat, this.state.lng];
     const { zoom } = this.state;
     const { toilets } = this.props;
-    const zoomControlPosition = isMobileOnly() ? 'topleft' : 'bottomright';
+    const zoomControlPosition = isMobile() ? 'topleft' : 'bottomright';
 
     return (
       toilets.length > 0
